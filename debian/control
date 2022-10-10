@@ -1,0 +1,27 @@
+Source: libclass-c3-xs-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Damyan Ivanov <dmn@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 12),
+               libsub-name-perl <!nocheck>,
+               perl-xs-dev,
+               perl:native
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libclass-c3-xs-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libclass-c3-xs-perl.git
+Homepage: https://metacpan.org/release/Class-C3-XS
+Rules-Requires-Root: no
+
+Package: libclass-c3-xs-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends}
+Enhances: libclass-c3-perl
+Description: Perl module to accelerate Class::C3
+ Class::C3::XS is a Perl module designed to enhance the performance of the
+ Class::C3 package (see libclass-c3-perl). It does so automatically and is not
+ designed to be used directly; once installed, it should accelerate all programs
+ that make use of Class::C3 itself.
